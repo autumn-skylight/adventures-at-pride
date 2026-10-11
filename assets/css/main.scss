@@ -75,6 +75,7 @@
   --nav-footer-bg-colour: #131418;
   --nav-text-colour: #f2f5f7;
   --hamburger-icon-colour: #f2f5f7;
+  --card-bg-colour: #2f2f33;
   --card-bg-colour-red: #e8baba;
   --card-bg-colour-orange: #eacfad;
   --card-bg-colour-yellow: #efecc1;
@@ -420,7 +421,7 @@ nav {
 }
 
 .band {
-  width: 85%;
+  width: 80%;
   max-width: 1500px;
   margin: 0 auto;
 
@@ -440,7 +441,84 @@ nav {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.blog_card {
+  background: var(--light-card-bg-colour);
+  text-decoration: none;
+  color: var(--light-nav-text-colour);
+  box-shadow: 0 2px 5px var(--light-card-box-shadow-colour);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 
+  @media (prefers-color-scheme: dark) {
+    background: var(--card-bg-colour);
+    text-decoration: none;
+    color: var(--nav-text-colour);
+    box-shadow: 0 2px 5px var(--card-box-shadow-colour);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  // sets up hover state
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--card-bg-colour);
+  }
+  &:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px var(--card-bg-hover-colour);
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 0 4px 5px var(--light-card-bg-hover-colour);
+    }
+  }
+
+  article {
+    padding: 20px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    color: var(--light-card-title-span-colour);
+    @media (prefers-color-scheme: dark) {
+      color: var(--card-title-span-colour);
+    }
+  }
+
+  p {
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--light-card-title-span-colour);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+    padding-right: 3em;
+    @media (prefers-color-scheme: dark) {
+      color: var(--card-title-span-colour);
+    }
+  }
+  .span_flex {
+    display: flex;
+  }
+
+  .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
 .blog_card_red {
   background: var(--light-card-bg-colour-red);
   text-decoration: none;
@@ -522,6 +600,7 @@ nav {
 .footer {
   position: fixed;
   left: 0;
+  padding: 1em;
   bottom: 0;
   width: 100%;
   background-color: var(--light-nav-footer-bg-colour);
@@ -637,9 +716,9 @@ nav {
   }
   &:hover {
     top: -2px;
-    box-shadow: 0 4px 5px var(--light-card-box-shadow-hover-colour);
+    box-shadow: 0 4px 5px var(--light-card-box-shadow-hover-colour-yellow);
     @media (prefers-color-scheme: dark) {
-      box-shadow: 0 4px 5px var(--card-box-shadow-hover-colour);
+      box-shadow: 0 4px 5px var(--light-card-bg-hover-colour-yellow);
     }
   }
 
