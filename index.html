@@ -15,11 +15,38 @@
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/assets/css/post.css" rel="stylesheet">
   <link href="/assets/css/home.css" rel="stylesheet">
+  <link href="/assets/css/nav.css" rel="stylesheet">
   <link rel="icon" href="/assets/images/home_pics/hc-with-bg-v2.ico">
 </head>
 
 <body>
   <a class="post-skip-link" href="#stories">Skip to stories</a>
+  <div class="site-menu">
+    <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"
+      aria-label="Open navigation menu">
+      <span class="site-menu-toggle-label">Menu</span>
+      <span class="site-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <button class="site-menu-backdrop" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
+    <aside id="site-menu" class="site-menu-panel" aria-labelledby="site-menu-title" aria-hidden="true" inert>
+      <div class="site-menu-panel-header">
+        <div>
+          <p class="site-menu-eyebrow">A little corner of the internet</p>
+          <h2 id="site-menu-title">Find your next adventure<span>.</span></h2>
+        </div>
+        <span class="site-menu-spark" aria-hidden="true">✳</span>
+      </div>
+      <nav class="site-menu-links" aria-label="Main navigation">
+        <a href="/index.html"><span>01</span> Home</a>
+        <a href="/index.html#stories"><span>02</span> All stories</a>
+        <a href="https://instagram.com/adventuresatpride"><span>03</span> Instagram</a>
+        <a href="https://tiktok.com/@adventuresatpride"><span>04</span> TikTok</a>
+      </nav>
+      <a class="site-menu-contact" href="https://www.instagram.com/direct/t/17844268713290712/">Say hello <span
+          aria-hidden="true">↗</span></a>
+      <p class="site-menu-footer">Make room to be you.</p>
+    </aside>
+  </div>
   <main>
     <section class="home-intro" aria-labelledby="home-title">
       <div class="home-intro-copy">
@@ -57,6 +84,7 @@
 
       <a class="home-feature" href="/post/22/11/18_11_22_southampton_pride_2022.html">
         <span class="home-feature-art" aria-hidden="true">
+          <img class="home-feature-image" src="/assets/images/home_pics/hannah-v3.jpg" alt="">
           <span class="home-feature-number">10</span>
           <span class="home-feature-label">A day to remember</span>
         </span>
@@ -78,7 +106,10 @@
 
       <div class="post-related-grid home-card-grid">
         <a href="/post/22/10/26_10_22_riding_my_first_rollercoaster_at_thorpe_park.html" class="post-card">
-          <span class="post-card-art post-card-art-09" aria-hidden="true">09</span>
+          <span class="post-card-art post-card-art-09" aria-hidden="true">
+            <img src="/assets/images/home_pics/IMG_4448.jpg" alt="" loading="lazy">
+            <span class="post-card-number">09</span>
+          </span>
           <span class="post-card-content">
             <span class="post-card-date">26 October 2022 <span aria-hidden="true">·</span> Thorpe Park</span>
             <span class="post-card-title">Riding my very first rollercoaster</span>
@@ -86,7 +117,10 @@
           </span>
         </a>
         <a href="/post/22/10/15_10_22_attending_high_clear_country_show_2022.html" class="post-card">
-          <span class="post-card-art post-card-art-08" aria-hidden="true">08</span>
+          <span class="post-card-art post-card-art-08" aria-hidden="true">
+            <img src="/assets/images/home_pics/me.jpeg" alt="" loading="lazy">
+            <span class="post-card-number">08</span>
+          </span>
           <span class="post-card-content">
             <span class="post-card-date">15 October 2022 <span aria-hidden="true">·</span> Newbury</span>
             <span class="post-card-title">A day at the Highclere Country Show</span>
@@ -94,7 +128,10 @@
           </span>
         </a>
         <a href="/post/22/10/09_10_22_riding_the_new_central_part_of_elizabeth_line.html" class="post-card">
-          <span class="post-card-art post-card-art-07" aria-hidden="true">07</span>
+          <span class="post-card-art post-card-art-07" aria-hidden="true">
+            <img src="/assets/images/home_pics/drew-beamer-vAij-E26haI-unsplash.jpg" alt="" loading="lazy">
+            <span class="post-card-number">07</span>
+          </span>
           <span class="post-card-content">
             <span class="post-card-date">9 October 2022 <span aria-hidden="true">·</span> London</span>
             <span class="post-card-title">Riding the new Elizabeth line</span>
@@ -102,7 +139,10 @@
           </span>
         </a>
         <a href="/post/22/08/15_08_22_what_i_thought_of_the_new_fantastic_beast_movie.html" class="post-card">
-          <span class="post-card-art post-card-art-06" aria-hidden="true">06</span>
+          <span class="post-card-art post-card-art-06" aria-hidden="true">
+            <img src="/assets/images/home_pics/hannah-v3.jpg" alt="" loading="lazy">
+            <span class="post-card-number">06</span>
+          </span>
           <span class="post-card-content">
             <span class="post-card-date">15 August 2022 <span aria-hidden="true">·</span> Film</span>
             <span class="post-card-title">A trip to the cinema for Fantastic Beasts</span>
@@ -117,6 +157,7 @@
     <a class="home-footer-brand" href="#home-title">Adventures at Pride<span>.</span></a>
     <p>Stories by Hannah <span aria-hidden="true">·</span> 2026</p>
   </footer>
+  <script src="/assets/js/nav.js"></script>
 </body>
 
 </html>

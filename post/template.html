@@ -14,11 +14,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="/assets/css/post.css" rel="stylesheet">
+    <link href="/assets/css/nav.css" rel="stylesheet">
     <link rel="icon" href="/assets/images/home_pics/hc-with-bg-v2.ico">
 </head>
 
 <body>
     <a class="post-skip-link" href="#post-content">Skip to article</a>
+    <div class="site-menu">
+        <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"
+            aria-label="Open navigation menu">
+            <span class="site-menu-toggle-label">Menu</span>
+            <span class="site-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <button class="site-menu-backdrop" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
+        <aside id="site-menu" class="site-menu-panel" aria-labelledby="site-menu-title" aria-hidden="true" inert>
+            <div class="site-menu-panel-header">
+                <div>
+                    <p class="site-menu-eyebrow">A little corner of the internet</p>
+                    <h2 id="site-menu-title">Find your next adventure<span>.</span></h2>
+                </div>
+                <span class="site-menu-spark" aria-hidden="true">✳</span>
+            </div>
+            <nav class="site-menu-links" aria-label="Main navigation">
+                <a href="/index.html"><span>01</span> Home</a>
+                <a href="/index.html#stories"><span>02</span> All stories</a>
+                <a href="https://hannahcodes.co.uk"><span>03</span> Hannah Codes</a>
+                <a href="https://twitter.com/autumn_skylight"><span>04</span> Twitter</a>
+            </nav>
+            <a class="site-menu-contact" href="mailto:hannah@hannahcodes.co.uk">Say hello <span
+                    aria-hidden="true">↗</span></a>
+            <p class="site-menu-footer">Make room to be you.</p>
+        </aside>
+    </div>
 
     <header class="post-hero">
         <img class="post-hero-image" src="/assets/images/home_pics/me.jpeg" alt="A view of Southampton Pride 2022">
@@ -144,6 +171,7 @@
             <p class="mobile">Copyright Hannah 2022</p>
         </div>
     </footer>
+    <script src="/assets/js/nav.js"></script>
 </body>
 
 </html>
