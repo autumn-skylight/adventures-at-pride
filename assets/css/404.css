@@ -1,0 +1,309 @@
+.portfolio-home #home {
+  margin: 0;
+}
+
+.portfolio-home .not-found-brand {
+  position: absolute;
+  top: 1.25rem;
+  left: max(1.5rem, calc((100% - 76rem) / 2));
+  z-index: 31;
+  color: #f8f1fa;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.portfolio-home .not-found-brand span {
+  color: #ed91d2;
+}
+
+.portfolio-home .not-found-brand:focus-visible {
+  border-radius: 0.2rem;
+  outline: 3px solid #f2c7e2;
+  outline-offset: 4px;
+}
+
+.portfolio-home .not-found {
+  position: relative;
+  display: grid;
+  min-height: max(760px, 100svh);
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  padding: 8rem max(1.5rem, calc((100% - 76rem) / 2)) 5rem;
+  isolation: isolate;
+  background-color: #24151f;
+  background-image:
+    linear-gradient(90deg, rgba(23, 16, 27, 0.9), rgba(39, 20, 41, 0.72)),
+    linear-gradient(0deg, rgba(29, 17, 32, 0.72), rgba(29, 17, 32, 0.12)),
+    url("https://assets.hannahcodes.co.uk/images/Adventures-At-Pride/adventures-at-pride-header.png");
+  background-position: center;
+  background-size: cover;
+  color: #f8f1fa;
+}
+
+.portfolio-home .not-found-copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.portfolio-home .not-found-description {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.portfolio-home .not-found .eyebrow {
+  margin: 0 0 1rem;
+  color: #f2c7e2;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.portfolio-home .not-found h1 {
+  margin: 0;
+  color: #f8f1fa;
+  font-size: clamp(8rem, 28vw, 11rem);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.95;
+}
+
+.portfolio-home .not-found .accent-dot,
+.portfolio-home .not-found-symbol,
+.portfolio-home .not-found-spark {
+  color: #ed91d2;
+}
+
+.portfolio-home .not-found h2 {
+  margin: 1rem 0 0;
+  color: #f8f1fa;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: -0.055em;
+  line-height: 1.2;
+}
+
+.portfolio-home .not-found-description {
+  max-width: 34rem;
+  margin: 0.8rem 0 0;
+  color: rgba(248, 241, 250, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.portfolio-home .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+}
+
+.portfolio-home .hero-actions .button {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(248, 241, 250, 0.3);
+  border-radius: 999px;
+  color: #f8f1fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.portfolio-home .hero-actions .button:hover {
+  transform: translateY(-2px);
+}
+
+.portfolio-home .hero-actions .button-primary {
+  border-color: #ed91d2;
+  background: #ed91d2;
+  color: #24151f;
+}
+
+.portfolio-home .hero-actions .button-primary:hover {
+  border-color: #f2b2e1;
+  background: #f2b2e1;
+  color: #24151f;
+}
+
+.portfolio-home .hero-actions .button-quiet:hover {
+  border-color: rgba(242, 199, 226, 0.8);
+  background: rgba(242, 199, 226, 0.1);
+  color: #fff;
+}
+
+.portfolio-home .hero-actions .button:focus-visible {
+  outline: 3px solid #f2c7e2;
+  outline-offset: 4px;
+}
+
+.portfolio-home .not-found-art {
+  position: relative;
+  width: min(100%, 17rem);
+  min-height: 17rem;
+  justify-self: center;
+  margin-top: 0.5rem;
+}
+
+.portfolio-home .not-found-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(16rem, 70vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(242, 199, 226, 0.25);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-home .not-found-orbit.orbit-two {
+  width: min(12rem, 54vw);
+  border-color: rgba(242, 199, 226, 0.38);
+}
+
+.portfolio-home .not-found-note {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: min(10.5rem, 44vw);
+  aspect-ratio: 0.86;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(242, 199, 226, 0.45);
+  border-radius: 44% 48% 46% 42%;
+  background: rgba(36, 21, 31, 0.26);
+  transform: translate(-50%, -50%) rotate(4deg);
+}
+
+.portfolio-home .not-found-symbol {
+  font-size: 6.25rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+}
+
+.portfolio-home .not-found-caption {
+  margin-top: 0.8rem;
+  color: rgba(248, 241, 250, 0.8);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.portfolio-home .not-found-spark {
+  position: absolute;
+  font-size: 1.35rem;
+}
+
+.portfolio-home .not-found-spark.spark-one {
+  top: 20%;
+  right: 5%;
+}
+
+.portfolio-home .not-found-spark.spark-two {
+  bottom: 21%;
+  left: 2%;
+  font-size: 1rem;
+}
+
+.portfolio-home .not-found-code {
+  position: absolute;
+  right: 0;
+  bottom: 8%;
+  color: rgba(248, 241, 250, 0.7);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(-7deg);
+}
+
+.portfolio-home .hero-footnote {
+  position: absolute;
+  right: max(1.5rem, calc((100% - 76rem) / 2));
+  bottom: 1.5rem;
+  left: max(1.5rem, calc((100% - 76rem) / 2));
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(248, 241, 250, 0.62);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-home .home-footer {
+  min-height: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.portfolio-home .home-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .portfolio-home .not-found {
+    min-height: max(760px, 100svh);
+    padding: 7.5rem 1.5rem 5rem;
+    background-position: 58% center;
+  }
+
+  .portfolio-home .not-found h1 {
+    font-size: clamp(7rem, 32vw, 10.6rem);
+  }
+
+  .portfolio-home .not-found h2 {
+    margin-top: 0.6rem;
+    font-size: 1.55rem;
+  }
+
+  .portfolio-home .not-found-description {
+    font-size: 0.875rem;
+  }
+
+  .portfolio-home .not-found-art {
+    min-height: 15.5rem;
+  }
+
+  .portfolio-home .hero-footnote {
+    right: 1.5rem;
+    left: 1.5rem;
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .portfolio-home .hero-footnote {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .portfolio-home .hero-actions .button {
+    font-size: 0.74rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-home .hero-actions .button {
+    transition: none;
+  }
+}
