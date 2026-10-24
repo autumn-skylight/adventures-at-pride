@@ -251,10 +251,10 @@ body.prides-page {
 }
 
 .pride-year {
-  display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
   min-width: 0;
 }
 
@@ -280,7 +280,7 @@ body.prides-page {
 }
 
 .pride-gallery figure {
-  flex: 0 0 11.25rem;
+  flex: 1 0 11.25rem;
   min-width: 0;
   margin: 0;
 }
@@ -449,11 +449,6 @@ body.prides-page {
 
   .pride-description {
     min-height: 0;
-  }
-
-  .pride-year {
-    grid-template-columns: 3.5rem minmax(0, 1fr);
-    gap: 0.4rem;
   }
 
   .pride-year-images {
