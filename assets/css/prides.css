@@ -290,7 +290,6 @@ body.prides-page {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 1rem;
-  width: 100%;
   background: linear-gradient(135deg, #673552, #a95c81 58%, #d47b8b);
   object-fit: cover;
 }
@@ -298,11 +297,12 @@ body.prides-page {
 .pride-image-button {
   display: block;
   width: 100%;
+  overflow: hidden;
   padding: 0;
   border: 0;
   border-radius: 1rem;
   background: transparent;
-  cursor: zoom-in;
+  cursor: default;
 }
 
 .pride-image-button:focus-visible {
@@ -312,6 +312,17 @@ body.prides-page {
 
 .pride-image-button img {
   border-radius: inherit;
+  transition: transform 180ms ease;
+}
+
+.pride-image-button:hover img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pride-image-button img {
+    transition: none;
+  }
 }
 
 .pride-lightbox {
