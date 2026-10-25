@@ -8,6 +8,12 @@ if (lightbox instanceof HTMLDialogElement) {
   const imageButtons = [];
   let activeImageButton = null;
 
+  document.querySelectorAll(".pride-year-images").forEach((row) => {
+    if (row.querySelectorAll("figure").length > 4) {
+      row.classList.add("has-many-images");
+    }
+  });
+
   document.querySelectorAll(".pride-gallery img").forEach((image) => {
     const button = document.createElement("button");
     button.className = "pride-image-button";

@@ -279,10 +279,38 @@ body.prides-page {
   display: none;
 }
 
+@media (min-width: 701px) {
+  .pride-year-images.has-many-images {
+    scrollbar-width: thin;
+    scrollbar-color: #c77aa8 rgba(255, 255, 255, 0.1);
+  }
+
+  .pride-year-images.has-many-images::-webkit-scrollbar {
+    display: block;
+    height: 0.55rem;
+  }
+
+  .pride-year-images.has-many-images::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .pride-year-images.has-many-images::-webkit-scrollbar-thumb {
+    border: 1px solid #24151f;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #d686b8, #f2c7e2);
+  }
+
+  .pride-year-images.has-many-images::-webkit-scrollbar-thumb:hover {
+    background: #f2c7e2;
+  }
+}
+
 .pride-gallery figure {
   flex: 1 0 11.25rem;
   min-width: 0;
   margin: 0;
+  padding-bottom: 0.75em;
 }
 
 .pride-gallery img {
