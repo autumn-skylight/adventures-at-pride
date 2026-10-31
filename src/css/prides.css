@@ -195,29 +195,30 @@ body.prides-page {
 
 .pride-timeline-container {
   width: 100%;
-  max-width: 1200px; /* Keeps it from stretching too far on ultra-wide monitors */
+  max-width: 1400px; /* WIDENED: Allows the content to fill more of the screen */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  padding: 0 4rem; /* Added generous edge padding */
   box-sizing: border-box;
 }
 
 /* Two-Column Grid Row */
 .pride-row {
   display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 2rem;
-  padding: 4rem 0;
-  border-top: 1px solid var(--border-colour); /* Full-width divider */
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  padding: 0 0 4rem 0; /* Removed top padding and top border */
   width: 100%;
+  align-items: start;
 }
 
 /* Left side (City Name) */
 .pride-timeline-left {
   position: sticky;
-  top: 2rem; /* Sticks to the top of the screen when scrolling past */
-  align-self: start;
+  top: 0; /* Set to 0 so the padding creates the visual gap */
+  margin: 0;
+  padding-top: 4rem; /* Replaces the row's top padding */
 }
 
 .pride-timeline-left .pride-year {
@@ -227,13 +228,17 @@ body.prides-page {
   text-transform: capitalize;
   line-height: 1.1;
   display: block;
+  margin: 0;
 }
 
 /* Right side (Content) */
 .pride-timeline-right {
   min-width: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  border-top: 1px solid var(--border-colour); /* Border moved here */
+  padding-top: 4rem; /* Matches left side padding so text aligns perfectly */
 }
 
 .pride-category {
@@ -267,8 +272,8 @@ body.prides-page {
   border: 1px solid var(--border-colour);
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 1.5rem; /* Space between multiple years */
-  width: 100%;
+  margin-bottom: 1.5rem;
+  width: 100%; /* Ensures it stretches fully across the wide right column */
   box-sizing: border-box;
 }
 
@@ -349,24 +354,33 @@ body.prides-page {
 /* ------------------------------------------- */
 /* MOBILE RESPONSIVENESS                       */
 /* ------------------------------------------- */
-@media (max-width: 768px) {
+/* ------------------------------------------- */
+/* MOBILE RESPONSIVENESS                       */
+/* ------------------------------------------- */
+@media (max-width: 900px) {
   .pride-timeline-container {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
   }
 
   .pride-row {
-    grid-template-columns: 1fr; /* Stacks City name on top of content */
-    padding: 3rem 0;
-    gap: 1rem; /* Reduces gap between city name and content */
+    grid-template-columns: 1fr;
+    padding: 0 0 3rem 0;
+    gap: 0;
   }
 
   .pride-timeline-left {
-    position: static; /* Removes sticky behavior on mobile */
-    margin-bottom: 0.5rem;
+    position: static;
+    margin-bottom: 0;
+    padding-top: 3rem; /* Replaces row padding */
   }
 
   .pride-timeline-left .pride-year {
-    font-size: 2.25rem; /* Scales city name down slightly for mobile */
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .pride-timeline-right {
+    padding-top: 2rem; /* Creates space between the city name and the line */
   }
 
   .pride-accordion {
@@ -383,7 +397,7 @@ body.prides-page {
   }
 
   .pride-image-gallery img {
-    height: 110px; /* Smaller images on narrow screens */
+    height: 110px;
   }
 }
 
@@ -408,4 +422,112 @@ body.prides-page {
 .prides-footer p {
   margin: 0;
   font-size: 0.8rem;
+}
+/* Clickable Image Buttons */
+.pride-image-button {
+  display: block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pride-image-button:focus-visible {
+  outline: 3px solid #e5a9c9;
+  outline-offset: 2px;
+}
+
+.pride-image-button img {
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.pride-image-button:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+/* ------------------------------------------- */
+/* LIGHTBOX / IMAGE MODAL                      */
+/* ------------------------------------------- */
+
+.pride-lightbox {
+  position: fixed;
+  margin: auto;
+  padding: 1.5rem;
+  background: #19191b; /* Matches your accordion background */
+  border: 1px solid #2a2a2c;
+  border-radius: 12px;
+  color: #ffffff;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-sizing: border-box;
+}
+
+/* Blur Effect on the background */
+.pride-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Nice Close Button on Top Right */
+.pride-lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.pride-lightbox-close:hover {
+  background-color: #e5a9c9; /* Pink accent hover */
+  color: #121214;
+  transform: scale(1.05);
+}
+
+/* Constrain the image size */
+.pride-lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(85vh - 6rem); /* Leaves room for caption and padding */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Prevents stretching */
+  border-radius: 8px;
+  margin: 2rem auto 0 auto; /* Centers image and clears the close button */
+}
+
+/* Caption Styling */
+.pride-lightbox-caption {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.pride-lightbox-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #e5a9c9;
+  font-weight: 600;
+}
+
+.pride-lightbox-caption-text {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+figcaption {
+  margin-bottom: 0.9em;
 }
