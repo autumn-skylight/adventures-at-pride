@@ -3,6 +3,9 @@
   --body-bg-colour: #121212;
   --border-colour: #573650;
 }
+* {
+  overflow: hidden;
+}
 .prides-skip-link {
   position: absolute;
   top: -4rem;
@@ -898,6 +901,13 @@ figcaption {
     overflow: hidden;
     width: 80%;
   }
+  .pride-summary {
+    color: #d1cbd3;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    width: 70%;
+  }
   .pride-image-gallery img {
     height: 100px; /* Slightly larger images for full-width */
     width: auto;
@@ -928,6 +938,13 @@ figcaption {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
+  }
+  .pride-summary {
+    color: #d1cbd3;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    width: 65%;
   }
   /* Accordion Box */
   .pride-accordion {
@@ -1015,6 +1032,13 @@ figcaption {
     overflow: hidden;
     width: 59%;
   }
+  .pride-summary {
+    color: #d1cbd3;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    width: 50%;
+  }
   .pride-image-gallery img {
     height: 100px; /* Slightly larger images for full-width */
     width: auto;
@@ -1045,6 +1069,13 @@ figcaption {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
+  }
+  .pride-summary {
+    color: #d1cbd3;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    width: 50%;
   }
   /* Accordion Box */
   .pride-accordion {
