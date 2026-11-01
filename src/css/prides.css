@@ -339,7 +339,7 @@ body.prides-page {
 }
 
 .pride-image-gallery img {
-  height: 300px;
+  height: 250px;
   width: auto;
   border-radius: 8px;
   object-fit: cover;
