@@ -367,7 +367,7 @@ body.prides-page {
   padding-top: -0.3em;
 }
 .pride-image-gallery img {
-  height: 250px;
+  height: 400px;
   width: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -425,7 +425,7 @@ body.prides-page {
   }
 
   .pride-image-gallery img {
-    height: 110px;
+    height: 300px;
   }
 }
 
